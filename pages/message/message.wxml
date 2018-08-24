@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="hx"></view>
+  <view wx:for="{{message}}">
+    <view class="message" >
+      <text class="message-name">{{item.content}}</text> 
+       <view class="message-time">{{item.created_at}}</view> 
+    </view>
+    <view class="hx"></view>
+  </view>
+    
+</view>
+

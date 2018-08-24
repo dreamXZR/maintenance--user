@@ -1,0 +1,94 @@
+.head-hx{
+  height: 10rpx;
+}
+.goods{
+  background-color: #FFFFFF;
+  height: 200rpx;
+}
+.goods_pic{
+  float: left;
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 70rpx;
+  margin-right: 40rpx;
+}
+
+.goods_name{
+  position: relative;
+  color: #3C4350;
+  font-size: 35rpx;
+  line-height:39rpx;
+  margin-right: 58.5rpx;
+  top: 50rpx;
+}
+.goods_price{
+  position: relative;
+  font-size: 35rpx;
+  top: 70rpx;
+  color: #3C4350;
+  /* color: #FF473D; */
+}
+.view-hx{
+  height: 5rpx;
+}
+.title{
+  position: relative;
+  display: flex;
+  height: 100rpx;
+  font-size: 38rpx;
+  padding-top: 40rpx;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.name-view{
+  position: relative;
+  height: 105rpx;
+  background-color: #FFFFFF;
+}
+.name-text,.phone-text,.addressinfo-text{
+  position: relative;
+  font-size: 33rpx;
+  top:30rpx;
+  left: 37rpx;
+  color:#3D4451; 
+}
+.name-input{
+  position: absolute;
+  font-size: 33rpx;
+  top:30rpx;
+  left:200rpx;
+  color:#A4A6AD; 
+}
+.phone-view,.address-view,.addressinfo-view{
+  height: 105rpx;
+  margin-top: 3rpx;
+  background-color: #FFFFFF;
+}
+.phone-input{
+  position: absolute;
+  font-size: 33rpx;
+  top:350rpx;
+  left:200rpx;
+  color:#A4A6AD; 
+}
+.addressinfo-input{
+  position: absolute;
+  font-size: 33rpx;
+  top:455rpx;
+  left:200rpx;
+  color:#A4A6AD; 
+  width: 500rpx;
+}
+.button{
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+   bottom: 0rpx;
+  font-size: 40rpx;
+  height: 94rpx;
+  color: #FFFFFF;
+  margin-top: 50rpx;
+  background-color: #FF473D;
+  border-radius: 0rpx;
+}

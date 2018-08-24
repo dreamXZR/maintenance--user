@@ -1,0 +1,21 @@
+  <view class="head">
+    <image class="head_img" bindtap="userInfo" src="{{ userInfo.avatarUrl }}"></image>
+    <text class="name">{{ userInfo.nickName }}</text>
+  </view>
+  <view class="hx"></view>
+   <view class="box" bindtap="myinfo">
+    <image class="my_box" src="../../images/my.png"></image>
+    <text class="my_name">我的个人信息</text>
+  </view>
+  <view class="box" bindtap="integral">
+    <image class="integral_box" src="../../images/integral.png"></image>
+    <text class="integral_name">积分管理中心</text>
+  </view>
+  <view class="box" bindtap="message">
+    <image class="message_box" src="../../images/message.png"></image>
+    <text class="message_name">消息中心</text>
+  </view> 
+  <view class="box" bindtap="record">
+    <image class="record_box" src="../../images/record.png"></image>
+    <text class="record_name">历史维修记录</text>
+  </view> 

@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="hx"></view>
+  <view wx:for="{{history}}">
+     <view class="record" >
+      <view class="record-time">{{item.created_at}}</view>
+      <text class="record-name">{{item.type}}-{{item.servicing}}</text> 
+    </view>
+    <view class="hx"></view>
+  </view>
+   
+    
+</view>
+

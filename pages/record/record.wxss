@@ -1,0 +1,36 @@
+.hx{
+  height: 3rpx;
+  background-color: #f4f4f4;
+}
+.record{
+  height: 100rpx;
+  position: relative;
+  background-color: #fff;
+}
+.record-time{
+   position: relative;
+   display: flex;
+   float: left;
+   font-size: 30rpx;
+   margin-left: 33rpx;
+   padding:10rpx;
+   color: #9DA1A7;
+}
+.record-name{
+  position: absolute;
+  float:left;
+  top:60rpx;
+  font-size: 30rpx;
+  color: #9DA1A7;
+  margin-left: 33rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}
+
+
+
+
+

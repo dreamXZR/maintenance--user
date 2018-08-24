@@ -1,0 +1,25 @@
+<!--pages/logistics/logistics.wxml-->
+<view class="title-view">
+    <view class="title">如果您通过物流将维修物品发往维修站请填写物流单信息</view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="message">
+    <view class="name-view">
+    <text class="name-text">物流单号：</text>
+      <input class="name-input" placeholder="请输入物流单号" name="user_logi_number"></input>
+    </view>
+    <view class="phone-view">
+      <text class="phone-text">物流号码：</text>
+      <input class="phone-input" type="number" placeholder="请输入物流联系电话" name="user_logi_phone"></input>
+    </view>  
+  </view>
+  <view class="phone">
+    <view class="phone-name">请上传物流单照片</view>
+  </view>
+  <view class="upload">
+    <text class="phone-text">上传照片：</text>
+    <button class="but_pay" bindtap="img_item" id='0'>点击上传</button>
+  </view>
+  <image  id='0'  src='{{tempFilePaths[0]}}'></image>
+  <button  class="button" formType="submit">上传</button>
+  </form>

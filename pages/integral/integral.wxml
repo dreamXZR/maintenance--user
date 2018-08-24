@@ -1,0 +1,15 @@
+  <view class="head">
+    <image class="head_img" bindtap="userInfo" src="{{ userInfo.avatarUrl }}"></image>
+    <text class="name">{{ userInfo.nickName }}</text>
+    <text class="integral">积分：{{userInfo.point}}</text>
+  </view>
+    <view class="goods" wx:for="{{ items }}">
+        <image class="goods_pic" src="{{servers}}{{item.image}}"> </image>
+        <view class="goods_hr"></view>
+        <view class="goods_name">{{ item.name }}</view>
+        <view class="goods_price">价值：{{item.point}}积分</view>
+        <view class="but" data-id="{{item.id}}" bindtap="exchange">
+             <button class="but_pay" >兑换</button>
+        </view>  
+    </view>
+    

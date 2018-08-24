@@ -1,0 +1,73 @@
+/* pages/integral/integral.wxss */
+.head{
+  height: 269rpx;
+  background: linear-gradient(to right, #FF473D , #FFA170);
+}
+.head_img{
+  position: relative;
+  width: 117rpx;
+  height: 117rpx;
+  top:32rpx;
+  left:320rpx;
+  border-radius: 50%;
+}
+.name{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 37rpx;
+  top:25rpx;
+  color: #ffffff;
+}
+.integral{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 30rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+.box1{
+  height: 25rpx;
+}
+.goods{
+  background-color: #FFFFFF;
+  margin-top: 10rpx;
+}
+.goods_pic{
+  float: left;
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.goods_name{
+  position: relative;
+  color: #3C4350;
+  font-size: 35rpx;
+  line-height:39rpx;
+  margin-right: 58.5rpx;
+  top: 20rpx;
+}
+.goods_price{
+  position: relative;
+  font-size: 35rpx;
+  top: 40rpx;
+  color: #3C4350;
+  /* color: #FF473D; */
+}
+.but{
+  height: 160rpx;
+}
+.but_pay{
+  float: right;
+  font-size: 25rpx;
+  width:200rpx;
+  color: #FF473D;
+  margin-top: 50rpx;
+  background-color: #FFFFFF;
+  margin-right: 30rpx;
+  border: 1rpx solid #FF473D;
+}

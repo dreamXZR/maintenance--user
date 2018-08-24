@@ -1,0 +1,23 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/logistics/logistics",
+    "pages/myinfo/myinfo",
+    "pages/integral/integral",
+    "pages/address/address",
+    "pages/message/message",
+    "pages/record/record"
+    
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "维修小程序--客户端",
+    "navigationBarTextStyle": "black"
+  }
+  
+}

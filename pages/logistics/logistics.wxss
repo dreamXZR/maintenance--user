@@ -1,0 +1,91 @@
+/* pages/logistics/logistics.wxss */
+.title-view{
+  height: 130rpx;
+}
+.title{
+  padding-top: 20rpx;
+  margin-left: 20rpx;
+  position: relative;
+  text-align: center;
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+  color: #3c4350;
+}
+.message{
+  height: 300rpx;
+  background-color: #fff;
+}
+.name-view,.phone-view{
+  position: relative;
+  top: 40rpx;
+  height: 105rpx;
+  background-color: #FFFFFF;
+}
+.name-text,.phone-text{
+  position: relative;
+  font-size: 30rpx;
+  top:30rpx;
+  left: 37rpx;
+  color:#3D4451; 
+}
+.name-input{
+  position: absolute;
+  font-size: 30rpx;
+  width: 400rpx;
+  top:30rpx;
+  left:210rpx;
+  color:#A4A6AD; 
+  border: 1px solid ;
+}
+.phone-input{
+  position: absolute;
+  font-size: 33rpx;
+  width: 400rpx;
+  top:30rpx;
+  left:210rpx;
+  color:#A4A6AD; 
+  border: 1px solid ;
+}
+.phone{
+  height: 70rpx;
+}
+.phone-name{
+  position: relative;
+  text-align: center;
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+  color: #3c4350;
+  padding-top: 10rpx;
+  margin-left: 20rpx;
+}
+.upload{
+  height: 110rpx;
+  background-color: #fff; 
+}
+/* .upload-img{
+  height: 320rpx;
+  width: 320rpx;
+  margin-left: 200rpx;
+} */
+.but_pay{
+  float: right;
+  font-size: 25rpx;
+  width:200rpx;
+  color: #FF473D;
+  margin-top: 20rpx;
+  background-color: #FFFFFF;
+  margin-right: 30rpx;
+  border: 1rpx solid #FF473D;
+}
+.button{
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  font-size: 40rpx;
+  height: 94rpx;
+  color: #FFFFFF;
+  margin-top: 50rpx;
+  background-color: #FF473D;
+  border-radius: 0rpx;
+}

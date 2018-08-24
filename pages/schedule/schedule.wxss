@@ -1,0 +1,116 @@
+/* .name-view{
+  height: 100rpx;
+}
+.name{
+  font-size: 38rpx;
+  padding-top: 20rpx;
+  margin-left: 20rpx;
+} */
+.view-hx{
+  height: 10rpx;
+  background-color: #fff;
+}
+.schedule{
+  height: 30rpx;
+  margin-bottom: 30rpx;
+}
+.schedule-name{
+  position: relative;
+  text-align: center;
+  margin-top: 10rpx;
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+  color: #3c4350;
+}
+.schedule-info-view{
+  height: 650rpx;
+  background-color: #fff;
+}
+.first{
+  height: 180rpx;
+  display: flex;
+}
+.first-left{
+  text-align: right;
+  display: inline-block;
+  width: 45%;
+  color: #9b9b9b;
+  height: 100%;
+}
+.first-left-hour{
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+}
+.first-center{
+  display: inline-block;
+  width: 10%;
+  color: #9b9b9b;
+  height: 100%;
+}
+.first-rigth{
+  display: inline-block;
+  width: 45%;
+  color: #9b9b9b;
+  height: 100%;
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+}
+.image-line{
+  width: 100%;
+  height: 100%;
+}
+.logisticsinfo{
+  height: 350rpx;
+  background-color: #FFF;
+}
+.logistics-name{
+  position: relative;
+  text-align: center;
+  margin-top: 10rpx;
+  font-family: PingFang-SC-Medium;
+  font-size: 37.44rpx;
+  color: #3c4350;
+}
+.logisticsinfo-name{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  color: #9b9b9b;
+}
+.logisticsinfo-phone{
+  position: relative;
+  float: left;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  color: #9b9b9b;
+}
+
+ .logistics-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin-left: 33%;
+  color: #9b9b9b;
+} 
+
+
+/* .bottom{
+  position: fixed;
+  height: 84rpx;
+  bottom: 0rpx;
+  background-color: #fff;
+  width: 100%;
+  z-index: 2; 
+}
+.bottom-right,.bottom-left{
+  width: 50%;
+  display: inline-block;
+}
+.button-right,.button-left{
+  float: right;
+  width: 100%;
+  font-size: 35rpx;
+  height: 94rpx;
+  color: black;
+  border-radius: 0rpx;
+} */

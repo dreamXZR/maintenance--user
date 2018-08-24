@@ -1,0 +1,24 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="head-hx"></view>
+  <view class="goods">
+    <image class="goods_pic" src="{{servers}}{{gift_image}}"> </image>
+    <view class="goods_hr"></view>
+    <view class="goods_name">{{gift_name}}</view>
+    <view class="goods_price">{{gift_point}}积分</view>
+  </view>
+  <view class="view-hx"></view>
+
+  <view class="name-view">
+    <text class="name-text">姓名</text>
+      <input class="name-input" value='{{name}}' name="name"></input>
+    </view>
+    <view class="phone-view">
+      <text class="phone-text">手机号码</text>
+      <input class="phone-input" type="number" value='{{phone}}' name="phone"></input>
+    </view> 
+    <view class="addressinfo-view">
+      <text class="addressinfo-text">详细地址</text>
+      <input class="addressinfo-input" value='{{address}}'  name="address"></input>
+    </view> 
+    <button  class="button" formType="submit">兑换</button>
+</form> 
