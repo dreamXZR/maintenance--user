@@ -1,3 +1,4 @@
+// pages/staff-index/staff-index.js
 var api = getApp().globalData.api;
 Page({
 
@@ -12,36 +13,37 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that=this;
-    that.setData({
-      servers: getApp().globalData.servers,
-    })
-    wx.request({
-      url: api + 'orderDetail',
-      data:{
-        order_id:options.id
-      },
-      success:function(res){
-        
-        that.setData({
-          info:res.data
-        })
-      }
-    })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
+    var that=this
+    wx.request({
+      url: api+'orderList',
+      data:{
+        user_id:wx.getStorageSync('user_id'),
+      },
+      success:function(res){
+        that.setData({
+          orderList:res.data
+        })
+      }
+    })
+  },
+  detail:function(e){
+    wx.navigateTo({
+      url: '/pages/schedule/schedule?id=' + e.currentTarget.dataset.id,
+    })
   },
 
   /**

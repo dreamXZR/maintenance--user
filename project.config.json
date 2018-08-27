@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,13 @@
 				{
 					"id": -1,
 					"name": "user",
-					"pathName": "pages/user/user"
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "staff_index",
+					"pathName": "pages/staff-index/staff-index"
 				}
 			]
 		}

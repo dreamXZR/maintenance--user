@@ -1,0 +1,17 @@
+<view class="name-view">
+  <view class="name">天津伯士乐建中液压技术有限公司</view>
+</view>
+<view class="work-list">
+  <text class="title">维修订单列表</text>
+  <scroll-view class="view-list" scroll-y="true">
+  <view wx:for="{{orderList}}">
+    <view class="listinfo">
+      <text class="list-name">{{item.type}}_{{item.servicing}}</text>
+      <button class="but_pay" bindtap="detail" data-id='{{item.id}}'>具体信息</button>
+    </view>
+    <view class="list-hx"></view>
+  </view>
+    
+    
+  </scroll-view>
+</view>

@@ -29,7 +29,7 @@ Page({
   },
   schedule: function () {
     wx.navigateTo({
-      url: '/pages/schedule/schedule'
+      url: '/pages/order-list/order-list'
     })
   },
   logistics: function () {
