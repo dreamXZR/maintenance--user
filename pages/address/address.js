@@ -54,12 +54,14 @@ Page({
     }
     form_data.user_id = wx.getStorageSync('user_id');
     form_data.present_id=that.data.present_id;
+    form_data.gift_point=that.data.gift_point;
     
     wx.request({
       url: api + 'exchange',
       method: 'POST',
       data: form_data,
       success: function (res) {
+       
         if (res.data.status) {
           wx.showToast({
             title: res.data.message,

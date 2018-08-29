@@ -64,7 +64,7 @@ page{
 }
 .address-info{
   position: relative;
-  float: right;
+  left:73rpx;
   font-size: 33rpx;
   color: #A1A1A1 ;
   top:30rpx;

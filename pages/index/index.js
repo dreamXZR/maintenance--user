@@ -1,4 +1,5 @@
 var api = getApp().globalData.api;
+const app = getApp();
 Page({
 
   /**
@@ -9,33 +10,67 @@ Page({
     lng: '116.40289',
     markers: [],
     shoplist: [{ lat: 39.906575, lng: 116.40289 }],
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
+    if (app.globalData.userInfo) {
+      console.log(1)
+    }else {
+      console.log(3)
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+        },
+        fail: res => {
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
+        }
+      })
+    }
+
+  },
+  
+  my: function () {
+    if(wx.getStorageSync('user_id')){
+      wx.navigateTo({
+        url: '/pages/my/my'
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
     
   },
-  index: function () {
-    wx.navigateTo({
-      url: '/pages/index/index'
-    })
-  },
-  my: function () {
-    wx.navigateTo({
-      url: '/pages/my/my'
-    })
-  },
   schedule: function () {
-    wx.navigateTo({
-      url: '/pages/order-list/order-list'
-    })
+    if (wx.getStorageSync('user_id')) {
+      wx.navigateTo({
+        url: '/pages/order-list/order-list'
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
+    
   },
   logistics: function () {
-    wx.navigateTo({
-      url: '/pages/logistics/logistics'
-    })
+    if (wx.getStorageSync('user_id')) {
+      wx.navigateTo({
+        url: '/pages/logistics/logistics'
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -43,24 +78,24 @@ Page({
   onReady: function () {
 
     this.mapCtx = wx.createMapContext('map');
-    var that = this;
-    if (!wx.getStorageSync('user_id')) {
-      wx.navigateTo({
-        url: '../login/login',
-      })
-    } else {
-      // 获取用户信息
-      wx.request({
-        url: api + 'getUserInfo',
-        method: 'POST',
-        data: {
-          user_id: wx.getStorageSync('user_id'),
-        },
-        success: function (res) {
-          getApp().globalData.userInfo = res.data
-        }
-      })
-    }
+    //var that = this;
+    // if (!wx.getStorageSync('user_id')) {
+    //   wx.navigateTo({
+    //     url: '../login/login',
+    //   })
+    // } else {
+    //   // 获取用户信息
+    //   wx.request({
+    //     url: api + 'getUserInfo',
+    //     method: 'POST',
+    //     data: {
+    //       user_id: wx.getStorageSync('user_id'),
+    //     },
+    //     success: function (res) {
+    //       getApp().globalData.userInfo = res.data
+    //     }
+    //   })
+    // }
   },
   reLocation: function () {
     //定位
@@ -140,7 +175,7 @@ Page({
           lat: latitude,
           shoplist: [{ lat:latitude, lng:longitude }]
         })
-        that.reLocation();
+        //that.reLocation();
         that.setShopMarker(that.data.shoplist);
       }
     })

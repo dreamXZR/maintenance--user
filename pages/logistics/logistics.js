@@ -29,7 +29,7 @@ Page({
       formData: form_data,
       success: function (res) {
         var json = JSON.parse(res.data);
-        if (json.status){
+        if (json.status==1){
           wx.showToast({
             title: json.message,
             icon: 'none',
@@ -39,6 +39,18 @@ Page({
                   url: '../index/index',
                 })
               },2000)
+            }
+          })
+        } else if (json.status == 2){
+          wx.showToast({
+            title: json.message,
+            icon: 'none',
+            success: function () {
+              setTimeout(function () {
+                wx.navigateTo({
+                  url: '/pages/myinfo/myinfo',
+                })
+              }, 2000)
             }
           })
         }else{

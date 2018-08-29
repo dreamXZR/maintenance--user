@@ -1,3 +1,8 @@
+<view wx:if="{{message.length==0}}" class='order'>
+  <image src='../../images/no-message.png' style='width:90rpx;height:92rpx'></image>
+  <view>暂无信息</view>
+</view>
+
 <view class="container">
   <view class="hx"></view>
   <view wx:for="{{message}}">
