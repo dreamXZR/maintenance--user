@@ -1,7 +1,7 @@
 
   <view class="view-hx"></view>
   <view class="schedule">
-    <view class="schedule-name">{{info.type}}维修进度</view>
+    <view class="schedule-name">维修进度</view>
   </view>
   <scroll-view class="schedule-info-view"  scroll-y="true" >
     <view wx:for="{{info.flow}}">
@@ -30,7 +30,7 @@
     <view wx:else>
       <text class="logisticsinfo-name">物流单号：暂无相关数据</text>
     </view>
-    <view wx:if="{{info.logi_number}}">
+    <view wx:if="{{info.logi_phone}}">
       <text class="logisticsinfo-name">物流号码：{{info.logi_phone}}</text>
     </view>
     <view wx:else>

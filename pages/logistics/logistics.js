@@ -21,13 +21,17 @@ Page({
       return false;
     }
     form_data.user_id = wx.getStorageSync('user_id');
-
+    wx.showLoading({
+      title: '正在上传中...',
+      mask: true
+    })
     wx.uploadFile({
       url: api + 'orders',
       filePath: that.data.tempFilePaths[0],
       name: 'user_logi_receipt',
       formData: form_data,
       success: function (res) {
+        wx.hideLoading();
         var json = JSON.parse(res.data);
         if (json.status==1){
           wx.showToast({
