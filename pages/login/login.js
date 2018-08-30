@@ -59,8 +59,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       servers: servers,
-
     })
+    
   },
 
 

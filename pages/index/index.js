@@ -17,22 +17,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
-    if (app.globalData.userInfo) {
-      console.log(1)
-    }else {
-      console.log(3)
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-        },
-        fail: res => {
-          wx.navigateTo({
-            url: '/pages/login/login',
-          })
-        }
-      })
-    }
 
   },
   
@@ -78,24 +62,20 @@ Page({
   onReady: function () {
 
     this.mapCtx = wx.createMapContext('map');
-    //var that = this;
-    // if (!wx.getStorageSync('user_id')) {
-    //   wx.navigateTo({
-    //     url: '../login/login',
-    //   })
-    // } else {
-    //   // 获取用户信息
-    //   wx.request({
-    //     url: api + 'getUserInfo',
-    //     method: 'POST',
-    //     data: {
-    //       user_id: wx.getStorageSync('user_id'),
-    //     },
-    //     success: function (res) {
-    //       getApp().globalData.userInfo = res.data
-    //     }
-    //   })
-    // }
+    var that = this;
+    if (!wx.getStorageSync('user_id')) {
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    } else {
+      //获取用户信息
+      wx.getUserInfo({
+        success:function(res){
+          getApp().globalData.userInfo =res.userInfo
+        }
+      })
+      
+    }
   },
   reLocation: function () {
     //定位
