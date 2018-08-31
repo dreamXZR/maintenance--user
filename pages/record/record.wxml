@@ -7,7 +7,7 @@
   <view wx:for="{{history}}">
      <view class="record" >
       <view class="record-time">{{item.created_at}}</view>
-      <text class="record-name">{{item.type}}-{{item.servicing}}</text> 
+      <text class="record-name">{{item.type ? item.type :'暂无信息'}}</text> 
     </view>
     <view class="hx"></view>
   </view>
