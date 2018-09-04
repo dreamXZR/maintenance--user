@@ -1,5 +1,5 @@
 
-  <view class="view-hx"></view>
+
   <view class="schedule">
     <view class="schedule-name">维修进度</view>
   </view>
@@ -8,7 +8,7 @@
       <view class="first">
         <view class="first-left">
           <view class="first-left-hour">{{item.finish_time}}</view>
-          <view class="first-left-hour">12:12</view>
+          
         </view>
         <view class="first-center">
           <image class="image-line" src="../../images/yuan.png" 
@@ -24,17 +24,12 @@
 <view class="logistics">
   <view class="logistics-name">物流单</view>
   <view class="logisticsinfo">
-    <view wx:if="{{info.logi_number}}">
-      <text class="logisticsinfo-name">物流单号：{{info.logi_number}}</text>
+    <view>
+      <text class="logisticsinfo-name">物流单号：{{info.logi_number ? info.logi_number:'暂无相关数据'}}</text>
     </view>
-    <view wx:else>
-      <text class="logisticsinfo-name">物流单号：暂无相关数据</text>
-    </view>
-    <view wx:if="{{info.logi_phone}}">
-      <text class="logisticsinfo-name">物流号码：{{info.logi_phone}}</text>
-    </view>
-    <view wx:else>
-      <text class="logisticsinfo-name">物流号码：暂无相关数据</text>
+    
+    <view>
+      <text class="logisticsinfo-name">物流号码：{{info.logi_phone ? info.logi_phone : '暂无相关数据'}}</text>
     </view>
     <view wx:if="{{info.logi_receipt}}">
       <image class="logistics-img" src="{{servers}}{{info.logi_receipt}}" mode='aspectFit'></image>

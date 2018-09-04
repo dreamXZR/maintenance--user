@@ -11,7 +11,7 @@ Page({
     phone: '',
     address: '',
     region: [],
-    customItem: '全部'
+    //customItem: '全部'
   },
 
   /**
