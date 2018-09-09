@@ -32,6 +32,9 @@ Page({
    */
   onShow: function () {
     var that = this;
+    that.setData({
+      userInfo: app.globalData.userInfo,
+    })
     wx.request({
       url: api + 'getUserInfo',
       method: 'POST',
@@ -40,8 +43,7 @@ Page({
       },
       success: function (res) {
         that.setData({
-          userInfo: res.data,
-          hasUserInfo: true
+          point: res.data.point,
         })
       }
     });

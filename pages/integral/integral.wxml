@@ -1,7 +1,7 @@
   <view class="head">
     <image class="head_img" bindtap="userInfo" src="{{ userInfo.avatarUrl }}"></image>
     <text class="name">{{ userInfo.nickName }}</text>
-    <text class="integral">积分：{{userInfo.point}}</text>
+    <text class="integral">积分：{{point}}</text>
   </view>
     <view class="goods" wx:for="{{ items }}">
         <image class="goods_pic" src="{{servers}}{{item.image}}"> </image>

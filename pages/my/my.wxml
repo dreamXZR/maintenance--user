@@ -14,6 +14,7 @@
   <view class="box" bindtap="message">
     <image class="message_box" src="../../images/message.png"></image>
     <text class="message_name">消息中心</text>
+    <text class="message_num">{{num}}条未读消息</text>
   </view> 
   <view class="box" bindtap="record">
     <image class="record_box" src="../../images/record.png"></image>

@@ -77,6 +77,19 @@ Page({
         }
       })
     }
+    var that=this
+    wx.request({
+      url: api +'getUserInfo',
+      method:'POST',
+      data:{
+        user_id:wx.getStorageSync('user_id')
+      },
+      success:function(res){
+        that.setData({
+          num: res.data.notification_count
+        })
+      }
+    })
   },
 
   /**

@@ -1,35 +1,4 @@
-<!--index.wxml-->
-<!-- <view class="container">
-<view class="view-hx"></view>
-  <view class="name-view">
-    <view class="name">天津伯士乐建中液压技术有限公司</view>
-  </view>
-  <view class="content-view">
-    <view class="address-content">地址：天津市西青区经济开发区民和道5号</view>
-    <view class="phone-content">电话：13579246810</view>
-    <view class="map-content">
-    <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="openLocationByWeiXin" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;"></map>
 
-    </view>
-    <view class="schedule-cotent" bindtap="schedule">
-      <image class="schedule-img" src="/images/schedule.png"></image>
-      <text class="schedule-name">点击查看我的维修进度</text>
-    </view>
-    <view class="upload-cotent" bindtap="logistics">
-      <image class="upload-img" src="/images/upload.png"></image>
-      <text class="upload-name">上传物流单</text>
-    </view>
-  </view>
-  
-</view>
-<view class="bottom">
-<view class="bottom-left" bindtap="index">
-      <button  class="button-left">首页</button>
-    </view>
-    <view class="bottom-right" bindtap="my">
-      <button  class="button-right">个人中心</button>
-    </view>
-  </view>  -->
 
 <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14"     bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="openLocationByWeiXin"    polyline="{{polyline}}"  show-location style="width: 100%; height: 80%;">
   <cover-view class="cover-view">

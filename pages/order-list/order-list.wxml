@@ -4,8 +4,10 @@
 <view class="work-list">
   <text class="title">维修订单列表</text>
   <scroll-view class="view-list" scroll-y="true">
+  
   <view wx:if="{{orderList.length==0}}" class='order'>
-    <view class="title" style='left:0'>暂无维修订单</view>
+    <image src='../../images/no-message.png' style='width:90rpx;height:92rpx'></image>
+    <view>暂无维修信息</view>
   </view>
   <view wx:for="{{orderList}}">
     <view class="listinfo">
