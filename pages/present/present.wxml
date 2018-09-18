@@ -1,13 +1,13 @@
-<view wx:if="{{history.length==0}}" class='order'>
+<view wx:if="{{present.length==0}}" class='order'>
   <image src='../../images/no-message.png' style='width:90rpx;height:92rpx'></image>
   <view>暂无历史记录</view>
 </view>
 <view class="container">
   <view class="hx"></view>
-  <view wx:for="{{history}}">
+  <view wx:for="{{present}}">
      <view class="record" >
       <view class="record-time">{{item.created_at}}</view>
-      <text class="record-name">{{item.type ? item.type :'暂无信息'}}</text>
+      <text class="record-name">{{item.name ? item.name :'暂无信息'}}</text>
       <button class="but_pay" bindtap="detail" data-id='{{item.id}}'>具体信息</button>
     </view>
     <view class="hx"></view>

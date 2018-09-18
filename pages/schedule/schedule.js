@@ -22,14 +22,19 @@ Page({
         order_id:options.id
       },
       success:function(res){
-        
         that.setData({
           info:res.data
         })
       }
     })
   },
-
+  preview:function(){
+    var that=this
+    var img = that.data.servers + that.data.info.logi_receipt
+    wx.previewImage({
+      urls: [img],
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -11,7 +11,9 @@
     "pages/message/message",
     "pages/record/record",
     "pages/schedule/schedule",
-    "pages/order-list/order-list"
+    "pages/order-list/order-list",
+    "pages/present/present",
+    "pages/present-detail/present-detail"
     
   ],
   

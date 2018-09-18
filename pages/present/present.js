@@ -1,4 +1,4 @@
-// pages/message/message.js
+
 var api = getApp().globalData.api;
 Page({
 
@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    present:[]
   },
 
   /**
@@ -27,27 +27,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that=this;
+    var that = this;
     wx.request({
-      url: api +'messageList',
+      url: api + 'presentList' ,
       method:'POST',
       data:{
         user_id:wx.getStorageSync('user_id')
       },
-      success:function(res){
+      success: function (res) {
         that.setData({
-          message:res.data.data
+          present: res.data.user_presents
         })
       }
     })
   },
-  message_detail:function(e){
-    var index=e.currentTarget.dataset.index
-    var that=this
-    wx.showModal({
-      title: '消息',
-      content: that.data.message[index].content,
-      showCancel:false
+  detail: function (e) {
+    wx.navigateTo({
+      url: '/pages/present-detail/present-detail?id=' + e.currentTarget.dataset.id,
     })
   },
   /**

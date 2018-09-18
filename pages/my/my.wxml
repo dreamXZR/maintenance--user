@@ -19,4 +19,8 @@
   <view class="box" bindtap="record">
     <image class="record_box" src="../../images/record.png"></image>
     <text class="record_name">历史维修记录</text>
-  </view> 
+  </view>
+  <view class="box" bindtap="present">
+    <image class="record_box" src="../../images/record.png"></image>
+    <text class="record_name">礼物兑换记录</text>
+  </view>  

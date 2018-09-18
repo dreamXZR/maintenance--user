@@ -23,7 +23,7 @@
   color: #3c4350;
 }
 .schedule-info-view{
-  height:650rpx;
+  height:309rpx;
   background-color:#fff;
   padding:50rpx 10%;
   width:80%;

@@ -1,4 +1,3 @@
-// pages/message/message.js
 var api = getApp().globalData.api;
 Page({
 
@@ -8,14 +7,36 @@ Page({
   data: {
   
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that=this;
+    that.setData({
+      servers: getApp().globalData.servers,
+    })
+    wx.request({
+      url: api + 'presentDetail',
+      method:'POST',
+      data:{
+        present_id:options.id
+      },
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          info:res.data
+        })
+      }
+    })
   },
-
+  preview:function(){
+    var that=this
+    var img = that.data.servers + that.data.info.logi_img
+    wx.previewImage({
+      urls: [img],
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -27,29 +48,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that=this;
-    wx.request({
-      url: api +'messageList',
-      method:'POST',
-      data:{
-        user_id:wx.getStorageSync('user_id')
-      },
-      success:function(res){
-        that.setData({
-          message:res.data.data
-        })
-      }
-    })
+   
   },
-  message_detail:function(e){
-    var index=e.currentTarget.dataset.index
-    var that=this
-    wx.showModal({
-      title: '消息',
-      content: that.data.message[index].content,
-      showCancel:false
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

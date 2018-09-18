@@ -1,0 +1,30 @@
+
+
+  <view class="schedule">
+    <view class="schedule-name">礼物信息</view>
+  </view>
+  <scroll-view class="schedule-info-view"  scroll-y="true" >
+    <view>{{info.name}}</view>  
+    <image class="logistics-img" src='{{servers}}{{info.image}}'></image>
+  </scroll-view>
+<view class="view-hx"></view>
+<view class="logistics">
+  <view class="logistics-name">物流单</view>
+  <view class="logisticsinfo">
+    <view>
+      <text class="logisticsinfo-name">物流单号：{{info.logi_number ? info.logi_number:'暂无相关数据'}}</text>
+    </view>
+    
+    <view>
+      <text class="logisticsinfo-name">物流号码：{{info.logi_phone ? info.logi_phone : '暂无相关数据'}}</text>
+    </view>
+    <view wx:if="{{info.logi_img}}">
+      <image class="logistics-img" src="{{servers}}{{info.logi_img}}" mode='aspectFit' bindtap='preview'></image>
+    </view>
+    <view wx:else>
+      <text class="logisticsinfo-name">物流回单：暂无相关数据</text>
+    </view>
+
+    
+  </view>
+</view>

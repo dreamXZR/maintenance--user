@@ -6,15 +6,16 @@
   <scroll-view class="schedule-info-view"  scroll-y="true" >
     <view wx:for="{{info.flow}}">
       <view class="first">
-        <view class="first-left">
-          <view class="first-left-hour">{{item.finish_time}}</view>
-          
-        </view>
         <view class="first-center">
-          <image class="image-line" src="../../images/yuan.png" 
+          <image wx:if="{{item.status==0}}" class="image-line" src="../../images/yuan.png" 
+          mode='aspectFit'></image>
+          <image wx:if="{{item.status==1}}" class="image-line-end" src="../../images/yuanend.png" 
           mode='aspectFit'></image>
         </view>
-      <view class="first-rigth">{{item.stepName}}</view>
+        <view class="first-left">
+          <view class="first-left-hour">{{item.finish_time}}</view>
+        </view>
+        <view class="first-rigth">{{item.type}}{{item.stepName}}已完成</view>
       </view>
     </view>
     
@@ -32,7 +33,7 @@
       <text class="logisticsinfo-name">物流号码：{{info.logi_phone ? info.logi_phone : '暂无相关数据'}}</text>
     </view>
     <view wx:if="{{info.logi_receipt}}">
-      <image class="logistics-img" src="{{servers}}{{info.logi_receipt}}" mode='aspectFit'></image>
+      <image class="logistics-img" src="{{servers}}{{info.logi_receipt}}" mode='aspectFit' bindtap='preview'></image>
     </view>
     <view wx:else>
       <text class="logisticsinfo-name">物流回单：暂无相关数据</text>
