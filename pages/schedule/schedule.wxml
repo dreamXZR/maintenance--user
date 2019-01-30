@@ -1,8 +1,8 @@
 
 
-  <view class="schedule">
+  <!-- <view class="schedule">
     <view class="schedule-name">维修进度</view>
-  </view>
+  </view> -->
   <scroll-view class="schedule-info-view"  scroll-y="true" >
     <view wx:for="{{info.flow}}">
       <view class="first">
@@ -21,6 +21,18 @@
     
     
 </scroll-view>
+<view class="view-hx"></view>
+<view class="logistics">
+  <view class="logistics-name">检测报告</view>
+  <view class="logisticsinfo" style='height:218rpx;'>
+    <view wx:if="{{info.report_img}}">
+      <image class="logistics-img" src="{{servers}}{{info.report_img}}" mode='aspectFit' bindtap='preview'></image>
+    </view>
+    <view wx:else>
+      <text class="logisticsinfo-name">暂无相关数据</text>
+    </view>
+  </view>
+</view>
 <view class="view-hx"></view>
 <view class="logistics">
   <view class="logistics-name">物流单</view>

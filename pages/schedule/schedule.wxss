@@ -96,7 +96,7 @@
 
  .logistics-img{
   width: 250rpx;
-  height: 250rpx;
+  height: 219rpx;
   margin-left: 33%;
   color: #9b9b9b;
 } 

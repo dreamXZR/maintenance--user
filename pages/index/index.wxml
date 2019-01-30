@@ -1,6 +1,10 @@
 
 
 <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14"     bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="openLocationByWeiXin"    polyline="{{polyline}}"  show-location style="width: 100%; height: 80%;">
+  <cover-view class="cover-view" style='top:37rpx'>
+      <cover-image src="/images/dot.png" class="img-doc"></cover-image>
+      <cover-view class="cover-text">点击图标进入导航</cover-view>
+  </cover-view>
   <cover-view class="cover-view">
       <cover-image src="/images/dot.png" class="img-doc"></cover-image>
       <cover-view class="cover-text">我的维修进度</cover-view>

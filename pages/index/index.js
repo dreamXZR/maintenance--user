@@ -115,7 +115,7 @@ Page({
         id: i,
         latitude: shop[i].lat,
         longitude: shop[i].lng,
-        width: 32,
+        width: 23,
         height: 32,
         // callout: {
         //   content: "",
